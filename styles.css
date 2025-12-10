@@ -1,51 +1,41 @@
 
+
 body {
     margin: 0;
     padding: 0;
-    background:#d723d1;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    
+
 }
 
 .titulo {
     position: absolute;
-    top: 50%;
+    top: 10px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     text-align: center;
-    color: rgb(50, 209, 61);
-    z-index: 10;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.titulo h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-.titulo p {
-    margin: 5px 0;
-    font-size: 2.5rem;
+    color: #000;
+    z-index: 20;
 }
 
 .slider {
     margin: 0 auto;
-    width: 80vw;
-    height: 80vh;
+    width: 70vw;
+    height: auto;
     overflow: hidden;
-    
+    position: relative;
+
 }
 
 .slides {
     width: 400%;
-    height: 80vh;
+    height: auto;
     display: flex;
-    
+
 }
 
 .slides input {
@@ -55,26 +45,20 @@ body {
 .slide {
     width: 25%;
     position: relative;
-    
+
 }
 
 .slide img {
     display: block;
-    margin: 0 auto;
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    min-width: 80vw;
-    min-height: 80vh;
-    object-fit: contain;
-    
+    border-radius: 20px;
 }
 
 .manual-navigation {
     position: absolute;
-    width: 80vw;
-    margin-top: -4vh;
+    width: 70vw;
+    bottom: 40px;
     display: flex;
     justify-content: center;
 }
@@ -121,8 +105,8 @@ body {
 
 .navigatio-auto {
     position: absolute;
-    width: 80vw;
-    margin-top: calc(80vh - 40px);
+    width: 70vw;
+    bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -146,3 +130,4 @@ body {
 #radio4:checked ~ .navigatio-auto .auto-btn4 {
     background-color: #FFF;   
 }
+
