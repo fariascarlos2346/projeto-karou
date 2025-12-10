@@ -1,24 +1,51 @@
+
 body {
     margin: 0;
     padding: 0;
+    background:#d723d1;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(50, 209, 61);
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.titulo p {
+    margin: 5px 0;
+    font-size: 2.5rem;
 }
 
 .slider {
     margin: 0 auto;
-    width: 800px;
-    height: 400px;
+    width: 80vw;
+    height: 80vh;
     overflow: hidden;
+    
 }
 
 .slides {
     width: 400%;
-    height: 400px;
+    height: 80vh;
     display: flex;
+    
 }
 
 .slides input {
@@ -28,16 +55,26 @@ body {
 .slide {
     width: 25%;
     position: relative;
+    
 }
 
 .slide img {
-    width: 475px;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 80vw;
+    min-height: 80vh;
+    object-fit: contain;
+    
 }
 
 .manual-navigation {
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 80vw;
+    margin-top: -4vh;
     display: flex;
     justify-content: center;
 }
@@ -72,4 +109,40 @@ body {
 
 #radio4:checked ~ .first {
     margin-left: -75%;
+}
+
+.navigatio-auto div {
+    border: 2px solid  #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigatio-auto {
+    position: absolute;
+    width: 80vw;
+    margin-top: calc(80vh - 40px);
+    display: flex;
+    justify-content: center;
+}
+
+.navigatio-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigatio-auto .auto-btn1 {
+    background-color: #FFF;   
+}
+
+#radio2:checked ~ .navigatio-auto .auto-btn2 {
+    background-color: #FFF;   
+}
+
+#radio3:checked ~ .navigatio-auto .auto-btn3 {
+    background-color: #FFF;   
+}
+
+#radio4:checked ~ .navigatio-auto .auto-btn4 {
+    background-color: #FFF;   
 }
